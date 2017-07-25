@@ -59,18 +59,17 @@ public class SecurityCodeView extends RelativeLayout {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                //重点   如果字符不为""时才进行操作
+                //如果字符不为""时才进行操作
                 if (!editable.toString().equals("")) {
                     if (stringBuffer.length() > 3) {
-                        //当文本长度大于3位时edittext置空
+                        //当文本长度大于3位时editText置空
                         editText.setText("");
                         return;
                     } else {
                         //将文字添加到StringBuffer中
                         stringBuffer.append(editable);
-                        editText.setText("");//添加后将EditText置空  造成没有文字输入的错局
-                        //  Log.e("TAG", "afterTextChanged: stringBuffer is " + stringBuffer);
-                        count = stringBuffer.length();//记录stringbuffer的长度
+                        editText.setText("");//添加后将EditText置空
+                        count = stringBuffer.length();
                         inputContent = stringBuffer.toString();
                         if (stringBuffer.length() == 4) {
                             //文字长度位4  则调用完成输入的监听
@@ -82,7 +81,7 @@ public class SecurityCodeView extends RelativeLayout {
 
                     for (int i = 0; i < stringBuffer.length(); i++) {
                         TextViews[i].setText(String.valueOf(inputContent.charAt(i)));
-                        TextViews[i].setBackgroundResource(R.mipmap.bg_verify_press);
+                        TextViews[i].setBackgroundResource(R.drawable.bg_user_verify_code_blue);
                     }
 
                 }
@@ -115,7 +114,7 @@ public class SecurityCodeView extends RelativeLayout {
             //   Log.e(TAG, "afterTextChanged: stringBuffer is " + stringBuffer);
             inputContent = stringBuffer.toString();
             TextViews[stringBuffer.length()].setText("");
-            TextViews[stringBuffer.length()].setBackgroundResource(R.mipmap.bg_verify);
+            TextViews[stringBuffer.length()].setBackgroundResource(R.drawable.bg_user_verify_code);
             if (inputCompleteListener != null)
                 inputCompleteListener.deleteContent(true);//有删除就通知manger
 
@@ -131,7 +130,7 @@ public class SecurityCodeView extends RelativeLayout {
         inputContent = stringBuffer.toString();
         for (int i = 0; i < TextViews.length; i++) {
             TextViews[i].setText("");
-            TextViews[i].setBackgroundResource(R.mipmap.bg_verify);
+            TextViews[i].setBackgroundResource(R.drawable.bg_user_verify_code);
         }
     }
 

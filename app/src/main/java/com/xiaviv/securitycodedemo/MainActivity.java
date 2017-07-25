@@ -1,12 +1,12 @@
 package com.xiaviv.securitycodedemo;
 
+import android.app.Activity;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements SecurityCodeView.InputCompleteListener {
+public class MainActivity extends Activity implements SecurityCodeView.InputCompleteListener {
 
     private SecurityCodeView editText;
     private TextView text;
