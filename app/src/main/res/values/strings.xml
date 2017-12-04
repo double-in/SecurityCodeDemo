@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SecurityCodeDemo</string>
+    <string name="tv_user_agreement">输入验证码表示同意《用户协议》</string>
 </resources>

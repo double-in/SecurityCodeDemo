@@ -25,7 +25,7 @@ public class MainActivity extends Activity implements SecurityCodeView.InputComp
     }
 
     private void findViews() {
-        editText = (SecurityCodeView) findViewById(R.id.scv_edittext);
+        editText = (SecurityCodeView) findViewById(R.id.edit_security_code);
         text = (TextView) findViewById(R.id.tv_text);
     }
 

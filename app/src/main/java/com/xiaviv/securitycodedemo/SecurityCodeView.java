@@ -34,7 +34,7 @@ public class SecurityCodeView extends RelativeLayout {
         TextViews = new TextView[4];
         View.inflate(context, R.layout.view_security_code, this);
 
-        editText = (EditText) findViewById(R.id.item_edittext);
+        editText = (EditText) findViewById(R.id.et);
         TextViews[0] = (TextView) findViewById(R.id.item_code_iv1);
         TextViews[1] = (TextView) findViewById(R.id.item_code_iv2);
         TextViews[2] = (TextView) findViewById(R.id.item_code_iv3);
@@ -111,10 +111,9 @@ public class SecurityCodeView extends RelativeLayout {
             //删除相应位置的字符
             stringBuffer.delete((count - 1), count);
             count--;
-            //   Log.e(TAG, "afterTextChanged: stringBuffer is " + stringBuffer);
             inputContent = stringBuffer.toString();
             TextViews[stringBuffer.length()].setText("");
-            TextViews[stringBuffer.length()].setBackgroundResource(R.drawable.bg_user_verify_code);
+            TextViews[stringBuffer.length()].setBackgroundResource(R.drawable.bg_user_verify_code_grey);
             if (inputCompleteListener != null)
                 inputCompleteListener.deleteContent(true);//有删除就通知manger
 
@@ -130,7 +129,7 @@ public class SecurityCodeView extends RelativeLayout {
         inputContent = stringBuffer.toString();
         for (int i = 0; i < TextViews.length; i++) {
             TextViews[i].setText("");
-            TextViews[i].setBackgroundResource(R.drawable.bg_user_verify_code);
+            TextViews[i].setBackgroundResource(R.drawable.bg_user_verify_code_grey);
         }
     }
 

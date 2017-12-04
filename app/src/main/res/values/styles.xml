@@ -8,12 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="text_editStyle" >
-        <item name="android:layout_height">47dp</item>
-        <item name="android:layout_width">47dp</item>
-        <item name="android:background">@mipmap/bg_verify</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_user_verify_code_grey</item>
         <item name="android:textColor">@color/common_blue_0090FF</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
 
     </style>
     <!-- 登录页面的样式-->
